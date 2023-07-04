@@ -3,7 +3,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- main
+- development
 
 resources:
 - repo: self
@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '2ee9be37-5bbe-4c1b-948b-be1469cb59dc'
-  imageRepository: 'clatestimg'
+  imageRepository: 'dev-img'
   containerRegistry: 'cicdcr1.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
